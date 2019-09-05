@@ -1,0 +1,23 @@
+<!--doctype html--> 
+<html lang="es"> 
+  <head></head> 
+  <body> 
+  <table>
+    <tr>
+      <th>Tiempo = 5</th>
+      <th>Humedad =5</th>
+      <th>Temperatura = 5</th>
+    </tr>
+    {% for obj in object_list %}
+      <tr>
+        <td><a href="{{ obj['IDPIF'] }}/">{{ obj['IDPIF'] }}</a></td>
+        <td>{{ obj['Tiempo'] }}</td>
+        <td>{{ obj['Humedad'] }}</td>
+        <td>{{ obj['Temperatura'] }}</td>
+      </tr>
+    {% endfor %} 
+  </table>
+
+  <a href="/log">HTML</a>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!--doctype html--> 
+<html lang="es"> 
+  <head></head> 
+  <body>
+    <table border="1">
+      {% for line in commentsList %}
+      <tr>
+      {% for item in line%}
+     <td>
+      {{item}}
+     </td>
+     {% endfor %}
+     </tr>
+        {% endfor %}
+    </table>
+
+    <form action="addToComments" method="post">
+      Tiempo: <input type="text" name="username">
+      Humedad: <input type="text" name="comment">
+      Temperatura: <input type="date" name="date">
+      <input type="submit" value="Submit">
+    </form> 
+  </body>
+
+</html>
